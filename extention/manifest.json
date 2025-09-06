@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Prompter",
+  "version": "0.0.1",
+  "description": "Enhances AI prompts",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://grok.com/*",
+        "*://x.com/*",
+        "*://chat.openai.com/*",
+        "*://claude.ai/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}

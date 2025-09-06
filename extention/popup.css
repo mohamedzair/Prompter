@@ -1,0 +1,76 @@
+:root {
+  --primary-color: #007bff;
+  --background: #f0f0f0;
+  --text-color: #000000; /* Changed to black for label */
+}
+
+body {
+  width: 200px;
+  min-height: 150px; /* Ensure enough height for centering */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: var(--background);
+}
+
+#app {
+  width: 180px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.toggle-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  gap: 10px;
+  color: var(--text-color); /* Black for "Prompter" label */
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+input[type="checkbox"]:checked {
+  background: var(--primary-color);
+}
+
+input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translateX(20px);
+}
+
+input[type="checkbox"]:hover {
+  opacity: 0.9;
+}
