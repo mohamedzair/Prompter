@@ -1,0 +1,41 @@
+/* This styles the main full-page container */
+.container {
+width: 100%;
+min-height: 100vh;
+padding: 2rem;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+/* THIS IS THE KEY TO CENTERING: It tells the container to
+horizontally center all of its children. */
+align-items: center;
+}
+/* This styles BOTH text areas for a consistent, document-like feel */
+textarea {
+width: 90%;          /* It's NOT 100%, so it has room to be centered */
+max-width: 800px;    /* On very wide screens, it stops getting wider */
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 6px;
+font-family: inherit;
+font-size: 1.1rem;
+box-sizing: border-box;
+resize: vertical;
+background-color: #f9f9f9;
+}
+/* This styles the button */
+button {
+padding: 12px 20px;
+background-color: #0d6efd;
+color: white;
+border: none;
+border-radius: 6px;
+font-size: 1rem;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.2s ease-in-out;
+}
+button:hover {
+background-color: #0b5ed7;
+}

@@ -7,17 +7,23 @@
 </head>
 <body>
 
-    <div class="header">
-        <h1>Prompter</h1>
-        <p>Enhance your ideas instantly.</p>
-    </div>
+    <div class="container">
 
-    <div class="setting-row">
-        <span class="setting-label">Enable Prompter</span>
-        <label class="switch">
-            <input type="checkbox" id="enable-toggle">
-            <span class="slider"></span>
-        </label>
+        <div class="header">
+            <h1>Prompter</h1>
+            <p>Enhance your ideas instantly.</p>
+        </div>
+    
+        <div class="setting-row">
+            <!-- The only change is adding an id="toggle-label" and removing the default text -->
+            <span class="setting-label" id="toggle-label">Enable Prompter</span>
+            
+            <label class="switch">
+                <input type="checkbox" id="enable-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+
     </div>
 
     <script src="popup.js"></script>
