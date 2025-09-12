@@ -1,5 +1,9 @@
 import { useState } from "react";
 import './App.css';
+import PromptInput from "./components/PromptInput/PromptInput.jsx";
+import PromptOutput from "./components/PromptOutput/PromptOutput.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 function App() {
 const [inputValue, setInputValue]= useState("");
 const [enhancedPrompt, setEnhancedPrompt] = useState("");
@@ -26,26 +30,22 @@ function handleClick(){
 const finalPrompt = ultimatePromptTemplate.replace("{{USER_PROMPT}}", inputValue)
 setEnhancedPrompt(finalPrompt);
 }
-return (
+return (  
+  <>
+  <Navbar />
   <div className="container">
-    <h1>Prompter</h1>
-    <textarea
-      rows="10"
-      placeholder="Enter your initial prompt here..."
-      value={inputValue}
-      onChange={handleInput}
-    />
-    <button onClick={handleClick}>
-      Enhance Prompt
-    </button>
-    {enhancedPrompt && (
-    <div>
-      <h2>Your Enhanced Prompt:</h2>
-      <textarea rows="15" 
-      value={enhancedPrompt}
-      readOnly/>
-      </div>)}
+    <h1 className="mainTitle">Prompter</h1>
+    <PromptInput 
+        inputValue={inputValue}
+        handleInput={handleInput}
+        handleClick={handleClick}
+      />
+      {enhancedPrompt && (
+        <PromptOutput promptText={enhancedPrompt} />
+      )}
+      <Footer />
   </div>
+  </>
 );
 }
 export default App;

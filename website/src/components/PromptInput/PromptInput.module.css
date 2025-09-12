@@ -1,0 +1,15 @@
+/* Styles ONLY for the PromptInput component's LAYOUT */
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 90%;
+    max-width: 650px; /* Let's make it a bit smaller */
+}
+
+/* We can add a style for the input textarea specifically if we need to */
+.inputTextarea {
+    min-height: 150px; /* A good, medium size for input */
+}

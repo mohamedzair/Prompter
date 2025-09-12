@@ -1,0 +1,44 @@
+/* Styles ONLY for the PromptOutput component's LAYOUT and unique elements */
+
+.outputContainer {
+    position: relative;
+    width: 90%;
+    max-width: 750px; /* Slightly wider to feel more important */
+}
+
+.outputTitle {
+    color: #333;
+    text-align: center;
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+}
+
+/* THE "SWEET SIZE" ADJUSTMENT */
+.outputTextarea {
+    min-height: 250px; /* Not too big, not too small */
+    padding-top: 40px;
+}
+
+/* The copy button is a UNIQUE element, so its style stays here */
+.copyButton {
+    /* This style is different from the main button, so we define it here */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 8px;
+    color: #555;
+    /* Reset some global button styles */
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.copyButton:hover {
+    background-color: #e0e0e0;
+    border-color: #ccc;
+    transform: scale(1.1);
+}

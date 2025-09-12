@@ -1,0 +1,31 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 8px 24px;
+    background-color: #ffffff;
+    border-bottom: 1px solid white;
+}
+
+.navSection {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    height: 32px; 
+    width: auto; 
+}
+.navLink {
+    text-decoration: none; /* Removes the ugly underline */
+    color: #555555;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s ease-in-out;
+}
+
+
+.navLink:hover {
+    color: #0d6efd;
+}
