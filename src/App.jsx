@@ -25,7 +25,7 @@ function App() {
     setEnhancedPrompt("");
 
     try {
-      const response = await fetch('http://localhost:3001/api/enhance', {
+      const response = await fetch('/api/enhance', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
