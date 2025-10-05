@@ -1,3 +1,0 @@
-name = "prompter-api"
-main = "worker.js"
-compatibility_date = "2024-04-05"
