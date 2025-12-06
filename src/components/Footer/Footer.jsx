@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       Made with ❤️ by
       <a href="https://x.com/Mohamedzairr" className={styles.myLink} target="_blank" rel="noopener noreferrer">
-        mohamed zair
+        salam ana nizar hna
       </a>
     </footer>
   )
