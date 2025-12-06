@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
-const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
 app.post('/api/enhance', async (req, res) => {
     try {
@@ -23,10 +23,7 @@ app.post('/api/enhance', async (req, res) => {
         }
 
         const instructionalPrompt = `
-      You are an expert prompt engineer. Your task is to take a user's simple idea or prompt and expand it into a detailed, well-structured prompt.
-      Based on the user's input, add details, context, and specify the desired format or style.
-      User's simple prompt: "${userPrompt}"
-      Your enhanced prompt:
+      Act as an expert prompt engineer. Enhance the input variable ${userPrompt} into a high quality command. Use only alphabetic letters and spaces. Do not use digits or symbols. Strictly limit the result to 60 words.
     `;
 
         const result = await model.generateContent(instructionalPrompt);

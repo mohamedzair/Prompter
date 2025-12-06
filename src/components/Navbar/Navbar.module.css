@@ -1,31 +1,35 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
-    padding: 8px 24px;
-    background-color: #ffffff;
-    border-bottom: 1px solid white;
+    align-items: center;
+    padding: 16px 48px;
+    background-color: transparent;
+    height: 80px;
 }
 
-.navSection {
+.logoWrapper {
     display: flex;
     align-items: center;
-    gap: 12px;
 }
 
 .logo {
-    height: 32px; 
-    width: auto; 
+    height: 40px;
+    width: auto;
 }
-.navLink {
-    text-decoration: none; /* Removes the ugly underline */
-    color: #555555;
-    font-weight: 500;
+
+.navButton {
+    text-decoration: none;
+    background-color: #0f172a;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    font-weight: 600;
     font-size: 0.9rem;
-    transition: color 0.2s ease-in-out;
+    transition: all 0.2s ease;
 }
 
-
-.navLink:hover {
-    color: #0d6efd;
+.navButton:hover {
+    background-color: #334155;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

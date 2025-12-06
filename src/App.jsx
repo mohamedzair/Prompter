@@ -51,7 +51,20 @@ function App() {
     <>
       <Navbar />
       <div className="container">
-        <h1 className="mainTitle">Prompter</h1>
+
+        {/* NEW HERO SECTION */}
+        <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
+          <h1 className="mainTitle">Prompter</h1>
+          <p style={{
+            fontSize: '1.1rem',
+            color: '#64748b',
+            marginTop: '0.5rem',
+            fontWeight: 500
+          }}>
+            Transform your ideas into professional prompts
+          </p>
+        </div>
+
         <PromptInput
           inputValue={inputValue}
           handleInput={handleInput}

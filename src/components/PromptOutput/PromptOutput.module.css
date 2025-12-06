@@ -3,42 +3,72 @@
 .outputContainer {
     position: relative;
     width: 90%;
-    max-width: 750px; /* Slightly wider to feel more important */
+    max-width: 800px;
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .outputTitle {
-    color: #333;
-    text-align: center;
-    margin: 0;
-    margin-top: 1rem;
-    margin-bottom: 0.75rem;
-    font-size: 1.5rem;
+    color: #0f172a;
+    text-align: left;
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
-/* THE "SWEET SIZE" ADJUSTMENT */
 .outputTextarea {
-    min-height: 250px; /* Not too big, not too small */
-    padding-top: 40px;
+    /* min-height: 250px; <-- REMOVED MIN-HEIGHT */
+    width: 100%;
+    padding: 0;
+    margin-top: 0.5rem;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #334155;
+    background: transparent;
+    font-family: inherit;
+    overflow: hidden;
+    /* Hide scrollbar */
 }
 
 /* The copy button is a UNIQUE element, so its style stays here */
 .copyButton {
-    /* This style is different from the main button, so we define it here */
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    top: 24px;
+    right: 24px;
+    background-color: transparent;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
     padding: 8px;
-    color: #555;
-    /* Reset some global button styles */
-    font-weight: normal;
-    font-size: 1rem;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .copyButton:hover {
-    background-color: #e0e0e0;
-    border-color: #ccc;
-    transform: scale(1.1);
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+    color: #0f172a;
+    transform: translateY(-1px);
 }

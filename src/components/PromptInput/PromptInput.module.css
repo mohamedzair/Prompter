@@ -4,12 +4,57 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
     width: 90%;
-    max-width: 650px; /* Let's make it a bit smaller */
+    max-width: 800px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    /* Soft premium shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* We can add a style for the input textarea specifically if we need to */
-.inputTextarea {
-    min-height: 150px; /* A good, medium size for input */
+.inputGroup:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+}
+
+.promptTextarea {
+    width: 100%;
+    /* min-height: 120px;  <-- REMOVED MIN-HEIGHT so it can start small */
+    padding: 1rem;
+    border: none;
+    outline: none;
+    resize: none;
+    /* Disable manual resize */
+    font-size: 1.1rem;
+    color: #1e293b;
+    background: transparent;
+    font-family: inherit;
+    overflow: hidden;
+    /* Hide scrollbar */
+}
+
+.promptTextarea::placeholder {
+    color: #94a3b8;
+}
+
+.actionButton {
+    align-self: flex-end;
+    background: linear-gradient(135deg, #2563EB 0%, #1d4ed8 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+}
+
+.actionButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 15px -3px rgba(37, 99, 235, 0.4);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563EB 100%);
 }
