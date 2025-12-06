@@ -1,4 +1,3 @@
-// filepath: c:\Users\hp\Desktop\prompter\backend\server.js
 const express = require('express');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const dotenv = require('dotenv');
