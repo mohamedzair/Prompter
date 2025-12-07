@@ -35,6 +35,12 @@ app.post('/api/enhance', async (req, res) => {
     }
 });
 
+app.get("/", (req, res) => {
+    res.send("Express on Vercel");
+});
+
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
+
+module.exports = app;
